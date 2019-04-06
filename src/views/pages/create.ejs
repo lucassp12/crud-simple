@@ -1,8 +1,13 @@
 <div class="main-wrapper">
   <div class="auth-wrapper">
     <form action="/store" method="post">
-      <input type="name" name="name" placeholder="Seu Nome" />
-      <input type="sobrenome" name="sobrenome" placeholder="Seu Sobrenome" />
+      <input type="name" name="name" placeholder="Seu Nome" required />
+      <input
+        type="sobrenome"
+        name="sobrenome"
+        placeholder="Seu Sobrenome"
+        required
+      />
       <button type="submit">Criar</button>
     </form>
   </div>
