@@ -1,0 +1,28 @@
+<%- contentFor('body') %>
+<div class="text-center">
+  <h1>Lista de Nomes:</h1>
+  <div class="table">
+    <table>
+      <tr>
+        <th>Nome:</th>
+        <th>Sobrenome:</th>
+        <th></th>
+      </tr>
+      <% for (usuario of usuarios){%>
+      <tr>
+        <td><%= usuario.name %></td>
+        <td><%= usuario.sobrenome %></td>
+        <td>
+          <button type="submit">
+            <a href="/edit/<%= usuario.id %>">Editar</a>
+          </button>
+          <button id="destroy" type="submit">
+            <a href="/destroy">Excluir</a>
+          </button>
+        </td>
+      </tr>
+      <tr></tr>
+      <% } %>
+    </table>
+  </div>
+</div>
